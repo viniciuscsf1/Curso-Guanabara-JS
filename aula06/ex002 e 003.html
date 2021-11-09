@@ -1,0 +1,34 @@
+<!-- Apenas para seguir o curso, o HTML, CSS e JS estarão no mesmo arquivo-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Programa</title>
+    <style>
+        body{
+            background-color: lightsteelblue;
+            color:maroon;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo</h1>
+    <p>Já me livrei da maldição !!!!</p>
+    <script>
+        //O comando "window.prompt" ou so o "prompt" por natureza retorna uma String, dessa forma para que o código funcione da forma como se quer, ele precisa ser convertido pra número
+        var nome = prompt('Olá! Por favor, digite seu nome.')
+        alert('É um prazer te conhecer, ' + nome + '!')
+        alert('Agora, vou pedir para você digitar dois números inteiros!')
+        var n1 = Number.parseInt(prompt('Por favor digite o primeiro: '))
+        var n2 = Number.parseInt(prompt('Por favor digite o primeiro: '))
+        // Da pra colocar só "Number" e ai o JS vai se moldar de acordo com o dado
+        var soma = n1 + n2
+        // (number + number) para adição
+        // (string + string) para concatenação
+        alert(`A soma entre ${n1} e ${n2} é: `+ soma) //sem a conversão, o JS apenas concatenaria os numeros
+    </script>
+</body>
+</html>
