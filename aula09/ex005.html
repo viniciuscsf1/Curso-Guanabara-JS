@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgb(105, 29, 175);
+            color: rgb(255, 255, 0);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mt-3 mb-2">Iniciando os estudos de DOM</h1>
+        <h3 class ="mb-5">Curioso para fuçar as coisas</h3>
+        <p>Eiiitaaa Mainhaaa!! Esse Lorem ipsum é só na sacanageeem!! . Só digo uma coisa, Domingo ela não vai! Danadaa!!  Pau que nasce torto, Nunca se endireita. </p>
+        <p>E que abundância meu irmão viuu!! Assim você vai matar o papai</p>
+        <p>Vem minha odalisca, agora faz essa cobra coral subir!!!</p>
+        <p>Agora use meu lorem ipsum ordinária!!! Olha o quibeee! rema, rema, ordinária!.</p>
+
+        <div> Clique em mim </div>
+
+        <div class="jumbotron">
+            <h1 class="display-4">Olá, mundo!</h1>
+            <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um determinado conteúdo ou informação.</p>
+            <hr class="my-4">
+            <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+            <a name="aaa" class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a>
+        </div>
+        <div class="container">
+            <div class="col-md-12 d-flex justify-content-center">
+                <button type="button" class="btn btn-primary ml-5">Primary</button>
+                <button type="button" class="btn btn-secondary ml-5">Secondary</button>
+                <button type="button" class="btn btn-success ml-5">Success</button>
+                <button type="button" class="btn btn-danger ml-5">Danger</button>
+                <button id = "cinco" type="button" class="btn btn-warning ml-5" >Warning</button>
+                <button type="button" class="btn btn-info ml-5">Info</button>
+                <button type="button" class="btn btn-light ml-5">Light</button>
+                <button type="button" class="btn btn-dark ml-5">Dark</button>
+                <button type="button" class="btn btn-link ml-5">Link</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container mt-4">
+            <div class="col-md-12">
+                olha so este rodape
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.alert('NÃO SE ASSUSTE, A PAGINA REALMENTE NÃO FAZ NENHUM SENTIDO!')
+        window.document.write(window.navigator.appName)
+        var cabeca = window.document.head
+        var corpo = document.body
+        var h1 = window.document.body.h1
+        var h3 = window.document.querySelector('h3')
+        var paragrafo3 = document.getElementsByTagName('p')[3] //plural("Elements") precisa indicar a posição
+        var botao6 = window.document.getElementsByTagName('button')[5]
+        var botao5 = document.querySelector('button#cinco')
+        var container = document.getElementsByClassName('container')[1]
+        var jumbotron = document.getElementsByClassName('jumbotron')[0]
+        var textoJumbotron = document.getElementsByClassName ('lead')[0]
+        var aaa = document.getElementsByName('aaa')[0]
+        
+
+        h3.textContent = 'Disclaimer: Se você abriu esse exercício, não se assuste com a bagunça. Estou apenas praticando!!'
+        h3.style.background = 'black'
+        h3.style.paddingTop = '20px'
+        h3.style.color = 'white'
+        botao6.style.background = 'blue'
+        botao5.style.background = 'red'
+        botao5.style.color = 'black'
+        aaa.textContent = 'NÃO CLIQUE'
+        aaa.style.background = 'red'
+        aaa.style.borderColor = 'white'
+        container.style.background = 'white'
+        jumbotron.style.background = 'black'
+        textoJumbotron.style.color = 'white'
+        paragrafo3.style.textAlign = 'right'
+        paragrafo3.style.paddingTop = '30px'
+        paragrafo3.style.background = 'brown'
+        paragrafo3.style.color = 'black'
+    </script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQ
+    IAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-
+    ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-
+    ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+<footer>
+
+</footer>
+</html>
