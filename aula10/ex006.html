@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(42,139,42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id='area'>
+        Interaja
+    </div>
+    
+    <script>
+        //Importante dizer que essa forma de utilizar a variável não é a melhor possível, pois consome mais memória, foi utilizado aqui apenas para pratica do exercício
+        var mouse = document.querySelector('div#area')
+
+        //É possível declarar os eventos tanto no HTML, quanto aqui no JS
+        mouse.addEventListener('click',clicar)
+        mouse.addEventListener('mouseenter',entrar)
+        mouse.addEventListener('mouseleave',sair)
+
+        function clicar(){
+            mouse.innerText = 'Clicou, boa !'
+            mouse.style.background = 'red'
+            mouse.style.color = 'black'
+        }
+        function entrar(){
+            mouse.innerText = 'Entrou'
+        }
+        function sair(){
+            mouse.innerText = 'Saiu'
+            mouse.style.background = 'green'
+            mouse.style.color = 'white'
+        }
+    </script>
+</body>
+</html>
