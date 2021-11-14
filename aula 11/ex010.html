@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+
+    <style>
+        div {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<!-- Exercício que engloba as práticas desenvolvidas nos ex 8 e 9-->
+
+<body>
+
+    <div class="container">
+        <div class="col-md-6">
+            <h1>Sistema de Multas</h1>
+            <div>Velocidade do carro na avenida
+                <input type="number" name="avenida" id="avenida"> Km/h
+                <input type="button" value="Verificar" onclick="velocidadeAvenida()">
+            </div>
+
+            <div>Velocidade do carro na rua
+                <input type="number" name="rua" id="rua">
+                <input type="button" value="Verificar">
+            </div>
+            <div id="resultado"></div>
+        </div>
+        <div class="col-md-6">
+            <h1>Identificação de nacionalidade</h1>
+            <div>
+                <input type="text" id ="paisOrigem" placeholder="Digite seu país de origem">
+                <input type="button" value = "Checar" onclick = "nacionalidade()">
+            </div>
+            <div id="nacionalidade"></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var velocidadeRua = document.querySelector("input#rua")
+
+        function velocidadeAvenida() {
+            var velocidade = document.querySelector("input#avenida")
+            var velocidadeNumero = Number(velocidade.value)
+            var resultado = document.querySelector("div#resultado")
+            resultado.innerHTML = `Sua velocidade atual é de <strong>${velocidadeNumero}Km/h</strong>`
+            if (velocidadeNumero > 50) {
+                resultado.innerHTML += ("<p>Você ultrapassou o limite de velocidade desta rua, <strong>MULTADO !!</strong></p>")
+            }
+            resultado.innerHTML += "<p>Dirija com cuidado, preserve vidas !</p>"
+        }
+
+        function nacionalidade(){
+            var paisOrigem = document.querySelector("input#paisOrigem")
+            var paisOrigemString = String(paisOrigem.value)
+            var nacionalidade = document.querySelector("div#nacionalidade")
+            nacionalidade.innerHTML = "Você é"
+            if (paisOrigemString == 'Brasil' || paisOrigemString == 'brasil'){
+                nacionalidade.innerHTML += " brasileiro!"
+            }else{
+                nacionalidade.innerHTML += " estrangeiro!"
+            }
+        }
+    </script>
+</body>
+
+</html>
